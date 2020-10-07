@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  min-height: 110vh;
+}
+
+#cover {
+  max-height: 20em;
+  overflow: hidden;
+  background-image: url('https://www.maggi.co.uk/sites/default/files/styles/maggi_desktop_image_style/public/NUK1265%20maggi%20Recipes%20banner%201500x700px%20opt2A.jpg?h=4f5b30f1&itok=DcsF1RwA');
+  object-fit: cover;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: white;
+  background-color: brown;
+}
+
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: auto;
+  margin-top: 20px;
+}
+
+
+
+
+

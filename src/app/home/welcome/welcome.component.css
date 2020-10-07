@@ -1,0 +1,18 @@
+h1 {
+  background-color: lightyellow;
+  text-transform: uppercase;
+}
+
+#featuredRecipe {
+  background-size: cover;
+}
+
+#softBg {
+  background-color: rgba(243, 226, 69, 0.5);
+}
+
+#softBg h2, p {
+  color: black;
+}
+
+

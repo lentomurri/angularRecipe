@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <input type="text" [(ngModel)]='mail' placeholder="insert your email: " required>
+      <input type="password" [(ngModel)]='password' placeholder="insert your password" required>
+      <button class="btn-primary" (click)='checkUser()'>Sign In</button>
+      <hr>
+      <p>Not registered? Sign up now!</p>
+      <input type="text" [(ngModel)]='newMail' placeholder="insert your email: " required>
+      <input type="password" [(ngModel)]='newPassword' placeholder="insert your password" required>
+      <button class="btn-primary" (click)='addUser()'>Sign up</button>
+  </div>
+</div>

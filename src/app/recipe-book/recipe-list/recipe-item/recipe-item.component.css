@@ -1,0 +1,11 @@
+a.list-group-item:focus {
+  background-color: pink;
+}
+
+a.list-group-item:hover {
+  background-color: lightgrey;
+}
+
+button {
+  margin: 1%;
+}

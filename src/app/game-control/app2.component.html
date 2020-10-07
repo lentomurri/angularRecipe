@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-12">
+    <app-game-control (data)='onNumberChange($event)' [disabled]='disabled'></app-game-control>
+    <!-- $event will be the currentNumber returned by the data event emit and the method in the app component will run on it. Current number gets updated -> event fires in app component with that number -->
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12">
+    <h1>Current Number</h1>
+    <h1><span style="color: red">{{ currentNumber }}</span></h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-6">
+    <h1>ODD</h1>
+    <h1><span style="color: red">{{ oddScore}}</span></h1>
+  </div>
+
+  <div class="col-xs-6">
+    <h1>EVEN</h1>
+    <h1><span style="color: red">{{ evenScore}}</span></h1>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <app-odd *ngFor="let oddNumber of odd, index as i" [ngStyle]="{'color': i === 4 ? 'red' : ''}" [currentNumber] = "oddNumber"></app-odd>
+    </div>
+
+    <div class="col-xs-6 even">
+      <app-even *ngFor="let evenNumber of even, index as i" [currentNumber] = "evenNumber" [ngStyle]="{'color': i === 4 ? 'red' : ''}"></app-even>
+    </div>
+</div>

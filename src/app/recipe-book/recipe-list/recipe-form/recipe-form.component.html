@@ -1,0 +1,82 @@
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-md-10">
+      <form class="form-group">
+
+        <div class="row">
+          <div class="col-sm-5">
+            <label for="recipeName">Recipe Name</label>
+            <input type="text"
+            id="recipeName"
+            class="form-control" required
+            #recipeName>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <label for="description">Description</label>
+            <input type="text"
+            id="description"
+            class="form-control" required
+            #description>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <label for="imagePath">Insert Image Url: </label>
+            <input type="text"
+            id="imagePath"
+            class="form-control" required
+            #imagePath>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-5">
+            <label for="ingredientName">Ingredient Name</label>
+            <input type="text"
+            id="ingredientName"
+            class="form-control"
+            #ingredientName>
+          </div>
+
+          <div class="col-xs-2">
+            <label for="amount">Amount</label>
+            <input
+            type="number"
+            id="amount"
+            class="form-control"
+            #amount>
+          </div>
+
+          <div class="col-xs-2">
+            <label for="measure">Measure type</label>
+            <input
+            type="text"
+            id="measure"
+            class="form-control"
+            #measure>
+            <button class="btn btn-primary" role="button" (click)="onAddIngredient()">Add Ingredient</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-8" *ngFor="let ingredient of newRecipeIngredients">
+            <li> {{ ingredient.name}} - {{ingredient.amount}}{{ingredient.measure}}</li>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10">
+            <button class="btn btn-success" role="Submit" (click)="onSubmitNewRecipe()">Submit Recipe</button>
+          </div>
+        </div>
+      </form>
+      </div>
+
+
+</div>

@@ -1,0 +1,10 @@
+img {
+  max-height: 20em;
+  min-height: 20em;
+  object-fit: contain;
+}
+
+.list-group-item {
+  max-width: 20vw;
+  min-width: 200px;
+}

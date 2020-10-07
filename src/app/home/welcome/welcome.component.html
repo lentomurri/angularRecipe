@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="col-md-8">
+    <div class="jumbotron" [style.background-image]="'url(' + featured.imagePath + ')'" id="featuredRecipe">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Recipe of the day</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+          <div id='softBg'>
+            <h2>{{ featured.name }}</h2>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="jumbotron" id="featuredRecipe">
+      <div class="row">
+        <div class="col-xs-12">
+          <h1>Spot on... {{ftIngredient.name}}</h1>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-1">
+          <div id='softBg'>
+            <h2>{{ ftIngredient.name }}</h2>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

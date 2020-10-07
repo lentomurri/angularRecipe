@@ -1,0 +1,55 @@
+ <div class="row">
+    <div class="col-xs-12">
+    <form class="form-group" #edit>
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="recipeName">Recipe Name</label>
+          <input type="text"
+          id="recipeName"
+          class="form-control"
+          placeholder="{{recipe.name}}"
+          #recipeName>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="recipeDescription">Recipe Description</label>
+          <textarea type="text"
+          id="recipeDescription"
+          class="form-control"
+          #recipeDescription>
+          </textarea>
+        </div>
+      </div>
+
+        <div class="col-sm-12" id="ingredients">
+          <label for='ingredients'>Ingredients - Edit or Add New</label>
+          <div *ngFor="let ingredient of recipe.ingredients, index as i" #ingredients >
+            <input type="text" [value]= "ingredient.name">
+            <input type="amount" [value]= "ingredient.amount">
+            <input type="text" [value] = "ingredient.measure">
+          </div>
+        </div>
+
+          <div class="col-sm-12">
+            <button type="submit" (click)='onSubmit()'>Submit</button>
+          </div>
+
+          <div class="col-sm-12">
+            <div id="extra" #extra>
+              <input type="text" required>
+              <input type="number" required>
+              <input type="text" required>
+            </div>
+            <button type="submit" (click)='onAdd()'>Add</button>
+          </div>
+
+
+
+
+
+      </form>
+    </div>
+  </div>
+

@@ -1,0 +1,11 @@
+button {
+  margin: 2px;
+}
+
+.selected {
+  background-color: lightcoral;
+}
+
+.selected:hover {
+  background-color: lightcoral;
+}

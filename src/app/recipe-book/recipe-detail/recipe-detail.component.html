@@ -1,0 +1,24 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <img [src]= "currentItem.imagePath" alt="recipe name" class="img-responsive img-thumbnail">
+      <p>{{ currentItem.name }}</p>
+      <p>{{ currentItem.description }}</p>
+      <li class="list-group-item" *ngFor='let ingredient of currentItem.ingredients'> {{ ingredient.name}} - {{ingredient.amount}} {{ ingredient.measure}}
+      </li>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="btn-group col-xs-12" appDropdown *ngIf="currentItem !== undefined">
+      <button type="button" class=" btn btn-primary dropdown-toggle">Manage Recipe <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a [routerLink]="['/recipes', id]">Check this Recipe</a></li>
+        <li><a (click)='onAddShopping()'>Add to Shopping </a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>

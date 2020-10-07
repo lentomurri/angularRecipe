@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+}
+
+#picture {
+  background-size: cover;
+  min-height: 40em;
+}
+#ingredientList {
+  margin: 5%;
+}
+
+p {
+  padding: 5%;
+  font-size: 1.5em;
+}

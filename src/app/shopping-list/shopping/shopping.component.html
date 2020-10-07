@@ -1,0 +1,10 @@
+<div class="col-xs-12">
+  <hr>
+  <ul class="list-group">
+    <a class="list-group-item" style="cursor: pointer" *ngFor=' let ingredient of ingredients, index as i'(click)='onSelect(ingredient, i)' [ngClass]="{selected: selection === ingredient}">
+      {{ ingredient.name }} : {{ ingredient.amount }} {{ ingredient.measure}}
+    </a>
+  </ul>
+  <button class="btn btn-info" role="button" type="submit" (click)="onEdit()">Edit</button>
+<button class="btn btn-danger" role="button" type="button" (click)="onDelete()">Delete</button>
+</div>
